@@ -1,0 +1,6 @@
+.container{
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    background-color: grey;
+}
