@@ -1,0 +1,46 @@
+.container-itemHero {
+  display: flex;
+  background-color: green;
+  border-radius: 5px;
+}
+
+.container-itemHero img {
+  width: 50%;
+  border-radius: 5%;
+}
+
+.detail-item-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn_hero {
+  width: 100px;
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 420px) {
+  .detail-item-hero{
+    margin-top: 20px;
+  }
+  .detail-item-hero h2,
+  h3 {
+    font-size: 15px;
+  }
+
+  .btn_hero {
+    width: 100px;
+    margin-left: 10px;
+  }
+
+  .container-itemHero {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-itemHero img{
+    margin-top: 20px;
+  }
+
+}

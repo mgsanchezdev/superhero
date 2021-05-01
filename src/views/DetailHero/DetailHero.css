@@ -1,0 +1,44 @@
+.title-hero {
+  font-family: 'Zen Dots', cursive;
+  font-size: 60px;
+  text-align: center;
+}
+.container-detail-hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container-detail-hero img {
+  border-radius: 5%;
+}
+.detail-hero {
+  background-color: green;
+  width: 400px;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+
+@media (max-width: 420px) {
+  .container-detail-hero {
+    flex-direction: column;
+    align-items: center;
+  }
+  .title-hero {
+    font-size: 25px;
+  }
+  .container-detail-hero img {
+    width: 50%;
+  }
+
+  .detail-hero {
+    margin-left: 10px;
+  }
+
+  .detail-hero h2 {
+    font-size: 16px;
+   }
+}

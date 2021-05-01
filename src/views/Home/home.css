@@ -1,0 +1,37 @@
+.container-itemHeroTeam {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+.titleTeam {
+  font-family: 'Zen Dots', cursive;
+  text-align: center;
+  font-size: 60px;
+}
+
+.detalles-habilidades{
+  text-align: center;
+}
+
+.titulo-habilidades{
+  color: red;
+  font-family: 'Zen Dots', cursive;
+  margin-top: 20px;
+}
+
+@media (max-width: 780px) {
+  .container-itemHeroTeam{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+@media (max-width: 420px) {
+  .container-itemHeroTeam{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .titleTeam{
+    font-size: 30px;
+  }
+  
+}

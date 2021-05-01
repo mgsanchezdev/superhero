@@ -1,6 +1,13 @@
 .container{
+    width: 100vw;
     height: 50px;
     display: flex;
     align-items: flex-end;
     background-color: grey;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-size: 20px;
 }

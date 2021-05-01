@@ -10,7 +10,7 @@ import './auth.css';
 export const Auth = () => {
   const { login } = useAuth();
   const history = useHistory();
-  // const { login } = useAuth();
+  
   const { register, handleSubmit, errors, reset } = useForm({
     resolver: yupResolver(loginSchema),
   });
@@ -28,8 +28,8 @@ export const Auth = () => {
     };
 
     fetch(url, {
-      method: 'POST', // or 'PUT'
-      body: JSON.stringify(data), // data can be `string` or {object}!
+      method: 'POST', 
+      body: JSON.stringify(data), 
       headers: {
         'Content-Type': 'application/json',
       },

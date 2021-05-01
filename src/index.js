@@ -4,13 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AuthProvider from './context/auth';
-import TeamHeroProvider from "./context/teamHero";
+import {TeamHeroProvider} from './context/teamHero';
+import {HeroDetailsProvider} from './context/heroDetails';
 
 ReactDOM.render(
   <React.StrictMode>
-        <AuthProvider>
-        <TeamHeroProvider>
-      <App />
+    <AuthProvider>
+      <TeamHeroProvider>
+      <HeroDetailsProvider>
+        <App />
+        </HeroDetailsProvider>
       </TeamHeroProvider>
     </AuthProvider>
   </React.StrictMode>,
