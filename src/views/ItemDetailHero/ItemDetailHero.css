@@ -17,12 +17,12 @@
   align-items: center;
 }
 
-.form_group .input-search{
+.form_group .input-search {
   width: 400px;
 }
 
 .form_group .form-label {
-    width: 400px;
+  width: 400px;
 }
 .btn_form_item_Detail_hero {
   width: 200px;
@@ -30,34 +30,72 @@
   margin-left: 10px;
 }
 
-.container-hero{
+.container-hero {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   margin-top: 10px;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 1024px) {
+  .container-hero {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  .form_group{
+  .form-label h5{
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 780px) {
+  .container-hero {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-label h5{
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container-hero {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .form-label h5{
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .form_group {
     flex-direction: column;
     align-items: center;
   }
 
-  .form_group .input-search{
+  .form_group .input-search {
     width: 250px;
   }
 
   .form_group .form-label {
-   text-align: center;
-  margin-top: 60px;
+    text-align: center;
+    margin-top: 60px;
   }
 
-  .btn_form_item_Detail_hero{
+  .form_group .input-search {
+    margin-left: 30px;
+  }
+
+  .btn_form_item_Detail_hero {
     margin-top: 20px;
+    margin-left: 30px;
   }
 
-  .container-hero{
+  .container-hero {
     grid-template-columns: repeat(1, 1fr);
     margin-top: 100px;
   }

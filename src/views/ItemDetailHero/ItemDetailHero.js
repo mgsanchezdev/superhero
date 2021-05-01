@@ -1,14 +1,18 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable import/order */
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { errorAlert, messageAlert } from '../../utils/alerts';
 import ItemHero from '../../Component/ItemHero/ItemHero';
+import Loader from "react-loader-spinner";
 
 import './ItemDetailHero.css';
 
 const ItemDetailHero = () => {
   const { register, handleSubmit } = useForm();
   const [hero, setHero] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const handleSerch = async ({ heroName }) => {
     if (heroName !== '') {
@@ -21,11 +25,13 @@ const ItemDetailHero = () => {
         .then((response) => {
           if (response.results !== undefined) {
             setHero(response.results);
+            setLoading(false);
           } else {
             messageAlert(
               'error',
               'No se encontro ningun resultado con ese nombre de heroe'
             );
+            setLoading(false);
           }
         })
         .catch((error) => errorAlert(error));
@@ -33,6 +39,8 @@ const ItemDetailHero = () => {
       messageAlert('error', 'Por favor ingrese un nombre de personaje');
     }
   };
+
+  loading ? <Loader/> : null;
 
   return (
     <>

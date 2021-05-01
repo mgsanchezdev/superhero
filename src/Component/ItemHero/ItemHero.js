@@ -28,7 +28,7 @@ const ItemHero = ({ hero }) => {
           <Button
             variant="danger"
             onClick={handleRemoveHero}
-            className="btn_hero"
+            className="btn_herooo_eliminar"
           >
             Eliminar
           </Button>

@@ -7,21 +7,7 @@ export const TeamHeroContext = React.createContext(null);
 
 export const TeamHeroProvider = ({ children }) => {
   const [teamHero, setTeanHero] = useState([]);
-  /*   const [orintacionBuena, SetOrintacionBuena] = useState(0);
-  const [orintacionMala, SetOrintacionMala] = useState(0);
-  const [pesoPromedio, setPesoPromedio] = useState(0);
-  const [alturaPromedio, setAlturaPromedio] = useState(0);
-  const [powerstatsAcumulado, setPowerstatsAcumulado] = useState(0);
- */
-  /*  const prueba = () => {
-    setTeanHero();
-    SetOrintacionBuena();
-    SetOrintacionMala();
-    setPesoPromedio();
-    setAlturaPromedio();
-    setPowerstatsAcumulado();
-  }; */
-
+ 
   const combateAcumulada = () => {
     return teamHero.reduce((acumulador, hero) => {
       return acumulador + parseInt(hero.powerstats.combat);
@@ -132,18 +118,16 @@ export const TeamHeroProvider = ({ children }) => {
     // eslint-disable-next-line no-unneeded-ternary
     return findItem ? true : false;
   };
+
+  const deleteTeam = ()=>{
+    setTeanHero([]);
+  }
   return (
     <TeamHeroContext.Provider
       value={{
         teamHero,
         isInTeam,
         removeHeroTeam,
-        /* orintacionBuena,
-        orintacionMala,
-        pesoPromedio,
-        alturaPromedio,
-        powerstatsAcumulado,
-        prueba, */
         addHeroTeam,
         pesoPromedio,
         alturaPromedio,
@@ -152,7 +136,8 @@ export const TeamHeroProvider = ({ children }) => {
         velocidadAcumulada,
         durabilidadAcumulada,
         poderAcumulada,
-        combateAcumulada
+        combateAcumulada,
+        deleteTeam
       }}
     >
       {children}
