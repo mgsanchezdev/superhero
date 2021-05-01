@@ -1,11 +1,4 @@
 # Creado con Create React App
-
-El proyecto se puede ver en:
-
-Datos para conectarse a la app:
-
-usuario:challenge@alkemy.org
-password: react
 ## Detalles del proyecto:
  
  Utilice la API https://superheroapi.com/
